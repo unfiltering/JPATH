@@ -1,7 +1,7 @@
 # JPATH
  a library for converting urls into a path tree
 # Implementation
-implement this on a webpage with some textbox for awesome json formatted path trees :D
+implement this on a webpage with some textbox for awesome json formatted path trees :D<br>
 `<script src="//raw.githubusercontent.com/unfiltering/JPATH/main/jpath.js"></script>`
 # Documentation
 Function to generate JSON from an input, and display it in an output
@@ -17,3 +17,37 @@ function generateJSON() {
     // You can remove the console.log statement as it's not needed anymore
 }
 ```
+# What the hell does this do?
+Mostly nothing, this is meant for website ripping.<br>
+Here's an example of what it does, nonetheless.<br>
+## Input
+```
+https://windows93.net/c/sys/skins/w93.css.map
+https://windows93.net/c/sys/skins/w93.css
+https://windows93.net/c/files/programs/3d/index.html
+https://windows93.net/c/sys/boot/splash.html
+```
+## Output
+```
+{
+  "c": {
+    "sys": {
+      "skins": {
+        "w93.css.map": 0,
+        "w93.css": 0
+      },
+      "boot": {
+        "splash.html": 0
+      }
+    },
+    "files": {
+      "programs": {
+        "3d": {
+          "index.html": 0
+        }
+      }
+    }
+  }
+}
+```
+Note that JPath doesn't automatically beautify JSON. (this is for downloader so you can quickly download a ton of files at once)
