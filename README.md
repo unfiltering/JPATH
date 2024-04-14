@@ -18,14 +18,16 @@ function generateJSON() {
 }
 ```
 # What the hell does this do?
-Mostly nothing, this is meant for website ripping.<br>
+Mostly nothing, this is meant for website ripping. Specifically Windows 93 ripping.<br>Windows 93 uses a little file called files.json, which gives me the path to basically every file on windows 93.<br>Yes I made this so I can make awesome w93 things stfu
 Here's an example of what it does, nonetheless.<br>
 ## Input
 ```
 https://windows93.net/c/sys/skins/w93.css.map
 https://windows93.net/c/sys/skins/w93.css
 https://windows93.net/c/files/programs/3d/index.html
-https://windows93.net/c/sys/boot/splash.html
+https://windows93.net/c/files/programs/3d/js/three.min.js
+https://windows93.net/c/sys/boot/screensaver.html
+https://windows93.net/c/sys/boot/boot.html
 ```
 ## Output
 ```
@@ -37,12 +39,16 @@ https://windows93.net/c/sys/boot/splash.html
         "w93.css": 0
       },
       "boot": {
-        "splash.html": 0
+        "screensaver.html": 0,
+        "boot.html": 0
       }
     },
     "files": {
       "programs": {
         "3d": {
+          "js": {
+            "three.min.js": 0
+          },
           "index.html": 0
         }
       }
