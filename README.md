@@ -18,32 +18,38 @@ function generateJSON() {
 }
 ```
 # What the hell does this do?
-Mostly nothing, this is meant for website ripping.<br>
-Here's an example of what it does, nonetheless.<br>
+Converts urls into a JSON tree of their paths, super complicated since this is meant for website ripping.<br>A certain website uses a little file called files.json, which gives me the path to basically every file on that certain website, letting me clone every aspect of said website.<br>
+<b>Here's an example of what it does, nonetheless.</b><br>
 ## Input
 ```
-https://windows93.net/c/sys/skins/w93.css.map
-https://windows93.net/c/sys/skins/w93.css
-https://windows93.net/c/files/programs/3d/index.html
-https://windows93.net/c/sys/boot/splash.html
+https://example.com/backup/sys/skins/w93.css.map
+https://example.com/backup/sys/skins/w93.css
+https://example.com/backup/files/programs/3d/index.html
+https://example.com/backup/files/programs/3d/js/three.min.js
+https://example.com/backup/sys/boot/screensaver.html
+https://example.com/backup/sys/boot/boot.html
 ```
 ## Output
 ```
 {
-  "c": {
+  "backup": {
     "sys": {
       "skins": {
         "w93.css.map": 0,
         "w93.css": 0
       },
       "boot": {
-        "splash.html": 0
+        "screensaver.html": 0,
+        "boot.html": 0
       }
     },
     "files": {
       "programs": {
         "3d": {
-          "index.html": 0
+          "index.html": 0,
+          "js": {
+            "three.min.js": 0
+          }
         }
       }
     }
