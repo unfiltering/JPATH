@@ -66,7 +66,7 @@ async def main():
     script_name = get_script_name()
     default_cmd_title = "Downloader"
     set_cmd_title(default_cmd_title)
-    print(f"{Fore.RED} Note: You have to set what website you would like the downloader to download from.")
+    print(f"{Fore.RED}Note: You have to set what website you would like the downloader to download from.")
     while True:
         set_cmd_title(default_cmd_title)
 
