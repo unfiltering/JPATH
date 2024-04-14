@@ -19,7 +19,7 @@ function generateJSON() {
 ```
 # What the hell does this do?
 Mostly nothing, this is meant for website ripping. Specifically Windows 93 ripping.<br>Windows 93 uses a little file called files.json, which gives me the path to basically every file on windows 93.<br>Yes I made this so I can make awesome w93 things stfu<br>
-Here's an example of what it does, nonetheless.<br>
+<b>-- Here's an example of what it does, nonetheless.</b><br>
 ## Input
 ```
 https://windows93.net/c/sys/skins/w93.css.map
