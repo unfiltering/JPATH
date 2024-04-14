@@ -4,7 +4,7 @@ import asyncio
 import aiohttp
 import random
 from colorama import Fore, Style
-
+WEBSITE = "https://example.com" # do not include the last slash
 TAG = f"{Fore.BLUE}[JPATH]{Style.RESET_ALL} "
 INPUT_COLOR = f"{Fore.YELLOW}"
 USER_INPUT_COLOR = f"{Fore.WHITE}"
@@ -66,7 +66,7 @@ async def main():
     script_name = get_script_name()
     default_cmd_title = "Downloader"
     set_cmd_title(default_cmd_title)
-
+    print(f"{Fore.RED} Note: You have to set what website you would like the downloader to download from.")
     while True:
         set_cmd_title(default_cmd_title)
 
@@ -90,7 +90,7 @@ async def main():
             print(TAG + f"{Fore.RED}Invalid JSON format:{Style.RESET_ALL}", e)
             continue
 
-        await download_files_from_json(json_data, "https://windows93.net", download_path, script_name)
+        await download_files_from_json(json_data, WEBSITE, download_path, script_name)
 
         completion_message = f"{TAG}{Fore.GREEN}Downloaded all files to {Style.RESET_ALL}{USER_INPUT_COLOR}{download_path}{Style.RESET_ALL}{Fore.GREEN}!{Style.RESET_ALL}(remember this if you chose the default location!)"
         print(completion_message)
