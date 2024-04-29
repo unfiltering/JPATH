@@ -26,6 +26,13 @@ https://example.com/backup/files/programs/3d/index.html
 https://example.com/backup/files/programs/3d/js/three.min.js
 https://example.com/backup/sys/boot/screensaver.html
 https://example.com/backup/sys/boot/boot.html
+https://example.com/other/images/rengae.png
+https://example.com/other/images/logo.png
+https://example.com/other/images/bg.png
+https://example.com/other/images/bengay.png
+https://example.com/other/jpath.js
+https://example.com/other/jpath.py
+https://example.com/other/example.html
 ```
 ## Output
 ```
@@ -51,15 +58,31 @@ https://example.com/backup/sys/boot/boot.html
         }
       }
     }
+  },
+  "other": {
+    "images": {
+      "rengae.png": 0,
+      "logo.png": 0,
+      "bg.png": 0,
+      "bengay.png": 0
+    },
+    "jpath.js": 0,
+    "jpath.py": 0,
+    "example.html": 0
   }
 }
 ```
-Note that JPath doesn't automatically beautify JSON. (this is for downloader so you can quickly download a ton of files at once)
+Note: JPath doesn't automatically beautify JSON. (this is for the downloader so you can quickly download a ton of files at once)
 # The Downloader
 Take that fresh json you just formatted, and use JPATH.py to quickly download every single file from 
 the website you need.<br>
 ## How do I use it?
-- You're going to have to edit the website to download the jpath from in the Python code. Its right there in the beginning, so it shouldn't be too hard to find. (when you do this don't include the last slash.)<br>
+- You're going to have to edit the website to download the jpath from in the Python code. Its right there in the beginning, so it shouldn't be too hard to find.<br>
+```
+from colorama import Fore, Style
+WEBSITE = "https://example.com" # do not include last slash
+TAG = f"{Fore.BLUE}[JPATH]{Style.RESET_ALL}
+```
 - Open the python file. It's gonna ask for the JPath data, just put in the data you generated beforehand. (if you did)<br>
 - After that, it's gonna ask where you want to save it. For example, the default location;
 ```C:\Users\*USERNAME*\AppData\Local\JPATH\JPATH_*randomNumber*```<br>
