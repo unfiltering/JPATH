@@ -1,7 +1,7 @@
 # JPATH
  a library for converting urls into a path tree
 # Implementation
-implement this on a webpage with a textbox for awesome json formatted path trees :D<br>
+implement this on a webpage with a textbox for awesome json path trees :D<br>
 `<script src="//raw.githubusercontent.com/unfiltering/JPATH/main/jpath.js"></script>`
 # Documentation
 Function to generate JSON from an input, and display it in an output
@@ -11,12 +11,11 @@ function generateJSON() {
     let outputTextarea = document.getElementById('output'); // Grab the input and output
     let text = inputTextarea.value.trim(); // Get the text
     let finalJSON = jpath.create(text); // Generate it
-
     outputTextarea.value = finalJSON; // Set the textboxes text to the json
 }
 ```
 # What the hell does this do?
-Converts urls into a JSON tree of their paths, complicated since this is meant for website ripping.<br>A certain website uses a little file called files.json, which gives me the path to basically every file on that certain website, letting me clone every aspect of said website.<br>
+Converts urls into a JSON tree of their paths, complicated since this is meant for website ripping.<br>A certain website uses a json file with every file's path, which understandably gives me the path to basically every file on that certain website, letting me download every file off said website.<br>
 <b>Here's an example of what it does, nonetheless.</b><br>
 ## Input
 ```
