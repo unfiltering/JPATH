@@ -78,9 +78,11 @@ the website you need.<br>
 ## How do I use it?
 - You're going to have to edit the website to download the jpath from in the Python code. Its right there in the beginning, so it shouldn't be too hard to find.<br>
 ```
+...
 from colorama import Fore, Style
 WEBSITE = "https://example.com" # do not include last slash
 TAG = f"{Fore.BLUE}[JPATH]{Style.RESET_ALL}
+...
 ```
 - Open the python file. It's gonna ask for the JPath data, just put in the data you generated beforehand. (if you did)<br>
 - After that, it's gonna ask where you want to save it. For example, the default location;
