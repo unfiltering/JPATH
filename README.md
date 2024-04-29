@@ -86,5 +86,5 @@ TAG = f"{Fore.BLUE}[JPATH]{Style.RESET_ALL}
 - Open the python file. It's gonna ask for the JPath data, just put in the data you generated beforehand. (if you did)<br>
 - After that, it's gonna ask where you want to save it. For example, the default location;
 ```C:\Users\*USERNAME*\AppData\Local\JPATH\JPATH_*randomNumber*```<br>
-- Then all you have to do is press enter and watch it go.<br>
+- Then all you have to do is press enter and watch it go.<br><br>
 It might randomly quit for weird files, long names, etc, but if you make it download to where it was before, it will skip the ones that already exist. Just a quality of life feature, because it's a pain to download an entire site.
